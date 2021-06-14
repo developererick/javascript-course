@@ -6,7 +6,7 @@
   </head>
   <body>
     <script>
-      const numbers = [1, 2, 3, 4, 5]
+    /*  const numbers = [1, 2, 3, 4, 5]
 
       console.log([...numbers, 6, 7, 8])
 
@@ -28,7 +28,51 @@
         return arr
       }
 
+      console.log(multiply(1, 2, 3, 4, 5))*/
+
+      //spread só pode ser usado com coisas iteraveis
+      //arrays e objetos
+      //é uma forma de concatenar arrays
+      //spread operator
+      const numbers = [1, 2, 3, 4, 5]
+      console.log([...numbers, 6, 7, 8,...numbers])
+
+      const name = 'Erick'      
+      console.log(...name,'name')
+
+      function sum(firstNumber, secondNumber) {
+        console.log(firstNumber,secondNumber)
+        return firstNumber + secondNumber
+      }
+
+      //exemplo spread rest operator como parâmetro para uma função com duas entradas.
+      const number = [1, 2]
+      sum(...number)    
+
+      //exe,plo como parâmetro de entrada na função.
+      function multiply(...numbers) {
+        console.log(...numbers,'numbers')
+        const arr = numbers.map(number => number * 2)
+        return arr
+      }
+
       console.log(multiply(1, 2, 3, 4, 5))
+
+      //exemplo de concatenação de objetos.
+      object1 = {
+        name: "object1",
+        lastname: "last name"
+      };
+
+      object2 = {
+        name:"object2",
+        color: "red"
+      };
+
+      joinObjects = {...object1, ...object2};
+
+      console.log("objects", joinObjects);
+
     </script>
   </body>
 </html>
