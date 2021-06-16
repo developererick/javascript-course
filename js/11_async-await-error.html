@@ -9,7 +9,7 @@
       async function getRepository() {
         try {
         const repositorys = await fetch('https://api.github.com/users/mayconbalves/repos?per_page=50')
-        const data = await repositorysss.json()
+        const data = await repositorys.json()
         } catch (err) {
           console.error('Ops', err)
         }

@@ -6,6 +6,10 @@
   </head>
   <body>
     <script>
+      //async await também são baseados em promise
+      //a diferente entre eles a promise comum é que no async eu posso especificar que ela
+      //é assincrona
+      //o await espera o fetch ser resolvido primeiro
       async function getRepository() {
         const repositorys = await fetch('https://api.github.com/users/mayconbalves/repos?per_page=50')
         const data = await repositorys.json()

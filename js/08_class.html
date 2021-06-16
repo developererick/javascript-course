@@ -6,6 +6,9 @@
   </head>
   <body>
     <script>
+      //classes não são muito utilizadas em javascript
+
+      //toda classe em javascript requer um construtor, sempre deverá ser criado o constr junto
       class Person {
         constructor(name) {
           this.name = name
@@ -16,6 +19,8 @@
         }
       }
 
+      //quando é feito o extends é necessário utilizar o super, e passar os atributos por param
+      //para a classe base.
       class Age extends Person {
         constructor(name, age) {
           super(name)
@@ -29,7 +34,10 @@
       }
 
       const maycon = new Person('Maycon')
+      console.log(maycon)
       const mayconAge = new Age('Maycon', '30')
+      console.log(mayconAge)
+      
     </script>
   </body>
 </html>
